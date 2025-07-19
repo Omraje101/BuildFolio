@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anand Ujade | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ... All CSS copied from the previous messages, including */
+    /* Typing, Cursor, Scroll Reveal, Top Button, Theme Toggle... */
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background: #fff;
+      animation: blink 0.7s steps(2, start) infinite;
+      margin-left: 2px;
+    }
+
+    @keyframes blink {
+      to { visibility: hidden; }
+    }
+
+    .hidden {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #ffc107;
+      color: #000;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 50%;
+      font-size: 18px;
+      display: none;
+      cursor: pointer;
+      z-index: 999;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    #themeToggle {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .light-theme {
+      background: #f5f5f5;
+      color: #111;
+    }
+
+    .light-theme nav {
+      background: #fff;
+    }
+
+    .light-theme a {
+      color: #000;
+    }
+
+    .light-theme .cursor {
+      background: #000;
+    }
+
+    .zoomed {
+      animation: zoomSection 0.6s ease-in-out;
+    }
+
+    @keyframes zoomSection {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Theme and Top Button -->
+  <button id="themeToggle">Change Theme</button>
+  <button id="topBtn" onclick="scrollToTop()">↑</button>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-left">
+        <img src="anaa.jpg" alt="Profile" style="height: 40px; border-radius: 50%; margin-right: 10px;" />
+        <span class="nav-name">Anand Ujade</span>
+      </div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero fade-in section">
+    <img src="anaa.jpg" alt="Anand" style="width: 150px; border-radius: 50%;" />
+    <h1>Anand Prakash Ujade</h1>
+    <p><span id="typed-text"></span><span class="cursor"></span></p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about-section fade-in">
+    <h2>About Me</h2>
+    <p>I’m a final-year B.Tech IT student at PCCOE, Pune. I love building ML models and exploring data.
+    I enjoy writing research papers and have experience volunteering at college events like INNOVADA, ComicCon Pune, and Smart India Hackathon.</p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section white fade-in">
+    <h2>Education</h2>
+    <p><strong>B.Tech in Information Technology</strong><br>Pimpri Chinchwad College of Engineering, Pune<br>2022 – 2026 | CGPA: 6.3</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section light fade-in">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Hepatitis C Prediction Using ML</h3>
+      <p>ML models for predicting Hepatitis C using clinical data. Tools: Python, scikit-learn.</p>
+      <a href="https://colab.research.google.com/drive/1BcRqhYMhwRbdtGuEY_jiRN6jtJvj4qii" target="_blank">View Project</a>
+    </div>
+    <div class="project">
+      <h3>IPL Winning Team Prediction</h3>
+      <p>Predict IPL match outcomes using ML. Analyzed past stats & conditions.</p>
+      <a href="https://github.com/Omraje101/Projects-in-Resume" target="_blank">View Project</a>
+    </div>
+    <div class="project">
+      <h3>Diabetes Prediction System</h3>
+      <p>Used logistic regression & decision trees to classify diabetes risk using health data.</p>
+      <a href="https://github.com/Omraje101/Projects-in-Resume" target="_blank">View Project</a>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="section white fade-in">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Volunteered at Smart India Hackathon – organized tech challenges and mentored juniors.</li>
+      <li>Presented 2 research papers at INNOVADA with positive academic feedback.</li>
+      <li>Top contributor during Spectrum Event; led event coordination and execution.</li>
+      <li>Volunteer at ComicCon Pune – managed logistics and crowd support.</li>
+    </ul>
+  </section>
+
+  <!-- EXTRA-CURRICULAR -->
+  <section id="activities" class="section light fade-in">
+    <h2>Extra-Curricular Activities</h2>
+    <p>Enthusiastic about coding events, mentoring peers, writing, and creative collaborations. 
+    I participate actively in college hackathons, expos, bootcamps, and am part of the innovation club.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section white fade-in">
+    <h2>Contact</h2>
+    <p>Email: ujadeanand@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/anand-ujade-2ab60a258" target="_blank">Anand Ujade</a></p>
+    <p>GitHub: <a href="https://github.com/anandujade14" target="_blank">anandujade14</a></p>
+    <p>Phone: 9766308067</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Anand Prakash Ujade. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Typing animation
+    const textArray = ["Final Year IT Student", "ML Enthusiast", "Curious Researcher"];
+    const typedText = document.getElementById("typed-text");
+    let i = 0, j = 0, isDeleting = false;
+
+    function type() {
+      if (i < textArray.length) {
+        let currentText = textArray[i];
+        if (!isDeleting) {
+          typedText.textContent = currentText.substring(0, j++);
+          if (j > currentText.length) isDeleting = true;
+        } else {
+          typedText.textContent = currentText.substring(0, j--);
+          if (j === 0) {
+            isDeleting = false;
+            i = (i + 1) % textArray.length;
+          }
+        }
+      }
+      setTimeout(type, isDeleting ? 60 : 130);
+    }
+
+    type();
+
+    // Scroll reveal
+    const sections = document.querySelectorAll('.section');
+    const reveal = () => {
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.classList.add('show');
+          section.classList.remove('hidden');
+        }
+      });
+    };
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', () => {
+      sections.forEach(s => s.classList.add('hidden'));
+      reveal();
+    });
+
+    // Back to top
+    const topBtn = document.getElementById('topBtn');
+    window.onscroll = function () {
+      topBtn.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Theme Toggle
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+    });
+
+    // Zoom clicked section
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        const targetId = link.getAttribute('href').slice(1);
+        const section = document.getElementById(targetId);
+        if (section) {
+          section.classList.add('zoomed');
+          setTimeout(() => section.classList.remove('zoomed'), 600);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
